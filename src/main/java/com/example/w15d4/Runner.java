@@ -58,7 +58,7 @@ public class Runner implements CommandLineRunner {
 
         Drink Lemonade = new Drink("Lemonade", 128, 1.29);
         Drink Water = new Drink("Water", 0, 1.29);
-        Drink Wine = new Drink("Water", 0, 1.29);
+        Drink Wine = new Drink("Wine", 0, 1.29);
 
         DrinkRepository.save(Lemonade);
         DrinkRepository.save(Water);
