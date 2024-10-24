@@ -6,16 +6,20 @@ import lombok.Getter;
 
 @Getter
 @Entity
-@Table(name = "menu")
+@Table(name = "items")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 
 public abstract class Item {
     @Id
     @GeneratedValue  // Devi aggiungere la strategia di generazione per l'ID
     protected Long id;
-
+    @Column(nullable = false)
     protected int calories;
+    @Column(nullable = false)
     protected double price;
+
+    public Item() {
+    }
 
     public Item(int calories, double price) {
         this.calories = calories;

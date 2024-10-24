@@ -15,6 +15,10 @@ public class Topping extends Item {
     @Column(nullable = false)
     private String name;
 
+    public Topping(int calories, double price) {
+        super(0, 0);
+    }
+
     public Topping(String name, int calories, double price) {
         super(calories, price);
         this.name = name;

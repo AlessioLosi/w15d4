@@ -19,6 +19,10 @@ public class Drink extends Item {
         this.name = name;
     }
 
+    public Drink() {
+        super(0, 0);
+    }
+
     @Override
     public String toString() {
         return "Drink{" +
