@@ -2,6 +2,7 @@ package com.example.w15d4.Entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 
@@ -13,7 +14,7 @@ import java.util.List;
 public class Pizza extends Item {
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
+    @ManyToMany
     private List<Topping> toppingList;
     @Column(nullable = false)
     private boolean isXl = false;
