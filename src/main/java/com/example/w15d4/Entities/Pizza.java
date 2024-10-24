@@ -1,19 +1,15 @@
 package com.example.w15d4.Entities;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 
 import java.util.List;
 
 @Getter
 @Entity
+@Table(name = "Pizza")
 public class Pizza extends Item {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
     private String name;
 
     private List<Topping> toppingList;
